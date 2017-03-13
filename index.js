@@ -58,7 +58,8 @@ app.post('/getToken', function(request, response) {
                  "cstatus":"Test1",
                  "ctype":"Test",
                  "customerId":"Test",
-                 "balance":-400.99
+                 "balance":-400.99,
+                 "socialId":"test"
              }
          }
     ]

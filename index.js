@@ -57,7 +57,7 @@ app.post('/getToken', function(request, response) {
              "info":{
                  "cstatus":"Test1",
                  "ctype":"Test",
-                 "customerId":"Test",
+                 "customerId":"A2",
                  "balance":-400.99,
                  "socialId":"test"
              }

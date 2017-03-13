@@ -45,7 +45,7 @@ app.post('/getToken', function(request, response) {
 	var token = jwt.sign({ 
         "iss": "https://enigmatic-shelf-93460.herokuapp.com/",
         "sub": "4255551212", //becomes customer id in Customer Info SDE
-        "preferred_username" : "JohnDoe", //becomes username in Customer Info SDE
+        "preferred_username" : "JohnDoe2", //becomes username in Customer Info SDE
         "phone_number" : "+1-10-344-3765333", //becomes imei in Customer Info SDE
         "given_name" : "Test", //becomes first part of name in Personal Info SDE
         "family_name" : "Test2", //becomnes second part of name in Personal Info SDE

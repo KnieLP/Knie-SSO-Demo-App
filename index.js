@@ -55,11 +55,7 @@ app.post('/getToken', function(request, response) {
             {
              "type":"ctmrinfo",
              "info":{
-                 "cstatus":"Test1",
-                 "ctype":"Test",
-                 "customerId":"A2",
-                 "balance":-400.99,
-                 "socialId":"test"
+                 "customerId":"Test2 on IE"
              }
          }
     ]

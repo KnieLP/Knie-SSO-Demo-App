@@ -55,7 +55,15 @@ app.post('/getToken', function(request, response) {
             {
              "type":"ctmrinfo",
              "info":{
-                 "customerId":"Test3 on IE"
+               "customerId":"Test1 on IE"
+               "balance": -400.99,  //THE CUSTOMER FINANCIAL BALANCE IN DECIMAL VALUE
+               "currency": "USD",  //CURRENCY CODE
+               "socialId": "11256324780",  //SOCIAL ID OF YOUR CHOICE: FACEBOOK, TWITTER ETC...
+               "imei": "3543546543545688",  //UNIQUE DEVICE OR PHONE IDENTIFIER
+               "userName": "user000",  //CONSUMER NICKNAME OR USERNAME
+               "companySize": 500,  //COMPANY SIZE MEASURED BY NUMBER OF EMPLOYEES
+               "accountName": "bank corp",  //THE CUSTOMER'S COMPANY NAME
+               "role": "broker"  //CONSUMER ROLE TITLE
              }
          }
     ]

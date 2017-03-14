@@ -55,8 +55,8 @@ app.post('/getToken', function(request, response) {
             {
              "type":"ctmrinfo",
              "info":{
-                 "customerId":"Test3 on IE"
-                 
+                 "customerId":"Tes4 on IE"
+
              }
          }
     ]

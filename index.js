@@ -55,8 +55,8 @@ app.post('/getToken', function(request, response) {
             {
              "type":"ctmrinfo",
              "info":{
-               "customerId":"Test1 on IE"
-               "balance": -400.99 //THE CUSTOMER FINANCIAL BALANCE IN DECIMAL VALUE
+                 "customerId":"Test3 on IE"
+                 
              }
          }
     ]

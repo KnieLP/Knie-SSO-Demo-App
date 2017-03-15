@@ -34,8 +34,8 @@ app.get('/codeflow', function(request, response) {
   response.render('pages/codeflow');
 });
 
-app.get('/', function(request, response) {
-  response.render('pages/indexPage2');
+app.get('/indexPage2', function(request, response) {
+  response.render('pages/Template/indexPage2');
 });
 
 // render the customer page
@@ -86,6 +86,50 @@ app.post('/getToken', function(request, response) {
         	}
         });
 });
+
+app.post('/getToken2', function(request, response) {
+    // generate our token with the appropiate information and sign it with our private RSA key.
+    var token = jwt.sign({ 
+        "iss": "https://enigmatic-shelf-93460.herokuapp.com/",
+        "sub": "4255551212", //becomes customer id in Customer Info SDE
+        "preferred_username" : "JohnDoe22222222222222222", //becomes username in Customer Info SDE
+        "phone_number" : "+1-10-344-3765333", //becomes imei in Customer Info SDE
+        "given_name" : "Test12112212121211221", //becomes first part of name in Personal Info SDE
+        "family_name" : "Test2", //becomnes second part of name in Personal Info SDE
+        "email" : "email@email.com", //becomes Email adress in Peresonal Info SDE
+        "gender" : "Male", //becomes gender in Personal Info SDE 
+        "lp_sdes":[
+            {
+             "type":"ctmrinfo",
+             "info":{
+                 "customerId":"User2"
+
+             }
+         }
+    ]
+    }, cert_priv, { algorithm: 'RS256', expiresIn: '1h'});
+        //console.log(token);
+        // verify that the token was generated correctly
+        jwt.verify(token, cert_pub, function(err, decoded) {
+            // if the token didn't generate then respond with the error
+            if(err){
+                console.log(err);
+                response.json({
+                    "error": err,
+                    "Fail": "404"
+                });
+            }
+            // if successful then response with the token
+            else {
+                //console.log(decoded);
+                response.json({
+                    "decoded": decoded,
+                    "token": token
+                });
+            }
+        });
+});
+
 
 // used to generate the OpenID Connect Token for the code flow
 app.post('/token', function(request, response) {

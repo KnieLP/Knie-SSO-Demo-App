@@ -18,7 +18,7 @@
         If the user is logged in and verified then get the OpenID Connect Token
       */
       // Query the token endoint to get the OpenID Connect Token
-      $.post( "/getToken", function( data ) {
+      $.post( "/getToken2", function( data ) {
         console.log(data);
         //if successful
         if(data.Fail != "undefined" && data.Fail != "404"){

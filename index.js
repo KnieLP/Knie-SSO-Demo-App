@@ -59,7 +59,7 @@ app.post('/getToken', function(request, response) {
             {
              "type":"ctmrinfo",
              "info":{
-                 "customerId":"Test2"
+                 "customerId":"User1"
 
              }
          }

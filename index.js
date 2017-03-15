@@ -35,7 +35,7 @@ app.get('/codeflow', function(request, response) {
 });
 
 app.get('/', function(request, response) {
-  response.render('pages/indexPage2.ejs');
+  response.render('pages/indexPage2');
 });
 
 // render the customer page

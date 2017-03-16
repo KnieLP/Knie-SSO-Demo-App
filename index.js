@@ -49,10 +49,10 @@ app.post('/getToken', function(request, response) {
 	var token = jwt.sign({ 
         "iss": "https://enigmatic-shelf-93460.herokuapp.com/",
         "sub": "4255551212", //becomes customer id in Customer Info SDE
-        "preferred_username" : "JohnDoe22222222222222222", //becomes username in Customer Info SDE
+        "preferred_username" : "First User", //becomes username in Customer Info SDE
         "phone_number" : "+1-10-344-3765333", //becomes imei in Customer Info SDE
-        "given_name" : "Test12112212121211221", //becomes first part of name in Personal Info SDE
-        "family_name" : "Test2", //becomnes second part of name in Personal Info SDE
+        "given_name" : "First", //becomes first part of name in Personal Info SDE
+        "family_name" : "User", //becomnes second part of name in Personal Info SDE
         "email" : "email@email.com", //becomes Email adress in Peresonal Info SDE
         "gender" : "Male", //becomes gender in Personal Info SDE 
         "lp_sdes":[
@@ -92,10 +92,10 @@ app.post('/getToken2', function(request, response) {
     var token = jwt.sign({ 
         "iss": "https://enigmatic-shelf-93460.herokuapp.com/",
         "sub": "4255551212", //becomes customer id in Customer Info SDE
-        "preferred_username" : "JohnDoe22222222222222222", //becomes username in Customer Info SDE
+        "preferred_username" : "User 2", //becomes username in Customer Info SDE
         "phone_number" : "+1-10-344-3765333", //becomes imei in Customer Info SDE
-        "given_name" : "Test12112212121211221", //becomes first part of name in Personal Info SDE
-        "family_name" : "Test2", //becomnes second part of name in Personal Info SDE
+        "given_name" : "Second User", //becomes first part of name in Personal Info SDE
+        "family_name" : "User", //becomnes second part of name in Personal Info SDE
         "email" : "email@email.com", //becomes Email adress in Peresonal Info SDE
         "gender" : "Male", //becomes gender in Personal Info SDE 
         "lp_sdes":[

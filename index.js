@@ -65,7 +65,7 @@ app.post('/getToken', function(request, response) {
          }
     ]
     }, cert_priv, { algorithm: 'RS256', expiresIn: '1h'});
-        //console.log(token);
+        console.log(token);
         // verify that the token was generated correctly
         jwt.verify(token, cert_pub, function(err, decoded) {
         	// if the token didn't generate then respond with the error
@@ -108,7 +108,7 @@ app.post('/getToken2', function(request, response) {
          }
     ]
     }, cert_priv, { algorithm: 'RS256', expiresIn: '1h'});
-        //console.log(token);
+        console.log(token);
         // verify that the token was generated correctly
         jwt.verify(token, cert_pub, function(err, decoded) {
             // if the token didn't generate then respond with the error
